@@ -35,10 +35,10 @@ const Category = () => {
 
   return (
     <StateContext.Provider value={state}>
-      <div className="px-44 py-4 space-y-4 bg-gradient-to-b from-violet-200 to-violet-100">
+      <div className="md:px-44 py-4 px-2 space-y-4 bg-gradient-to-b from-violet-200 to-violet-100">
         {showPopup && <PopupLogin onClose={togglePopup} />}
         <p className="text-center font-bold text-3xl">Danh Mục</p>
-        <div className="flex flex-wrap space-x-8 justify-center items-center space-y-2">
+        <div className="flex flex-wrap md:space-x-8 space-x-2 justify-center items-center space-y-2">
           {TOOLS.map((tool, index) => (
             <button
               key={index}

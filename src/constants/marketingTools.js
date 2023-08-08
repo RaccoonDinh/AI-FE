@@ -21,7 +21,7 @@ export const marketing = [
     link: "https://www.jasper.ai/",
   },
   {
-    thumbnail: "https://scontent.fsgn8-3.fna.fbcdn.net/v/t39.30808-6/308669839_525902539541752_6895532368669282247_n.png?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=QUOSJCk_bDoAX-fq5fl&_nc_ht=scontent.fsgn8-3.fna&oh=00_AfDShXLhwxWCaKIAQo0Yc6tGuttWqRMOT8F3a1Oy9pf-Kw&oe=64C3B3B8",
+    thumbnail: "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_1df98a9a3440249eebcfc4c6f57ceaa4/adcreative-ai.png",
     name: "Adcreative",
     description: "Với sự hỗ trợ của trí tuệ nhân tạo, AdCreative.ai nâng cao tiềm năng tiếp thị của bạn chỉ trong vài giây. Vượt qua đối thủ một bước với sự trợ giúp của trình tạo văn bản trí tuệ nhân tạo và thông tin thời gian thực về thành công của chiến dịch tiếp thị của bạn. Công cụ trí tuệ nhân tạo sẽ tiếp tục học tập và trở nên tốt hơn mỗi ngày. Bạn có thể tạo ra một lượng bài viết vô tận trong thời gian ngắn và tăng tỷ lệ chuyển đổi lên 14 lần.",
     link: "https://www.adcreative.ai/",

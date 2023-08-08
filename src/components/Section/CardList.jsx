@@ -35,7 +35,7 @@ const CardList = ({ productsPerPage, products }) => {
   };
 
   return (
-    <div className=" space-y-8">
+    <div className="space-y-8">
       {currentProducts.map((product, index) => (
         <Card key={index} data={product} />
       ))}

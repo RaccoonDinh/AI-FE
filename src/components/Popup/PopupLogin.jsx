@@ -21,6 +21,8 @@ const PopupLogin = ({ onClose }) => {
 
   const [isValid, setIsValid] = useState(true);
 
+  const [toggleM, setToggleM] = useState(true);
+
   const handleData = (data) => {
     setAddress(data.name);
   };
@@ -141,7 +143,7 @@ const PopupLogin = ({ onClose }) => {
             Vui lòng đăng nhập để tiếp tục
           </p>
 
-          <div className="flex w-full  justify-center space-x-20">
+          <div className="sm:flex hidden w-full justify-center space-x-20">
             <div className="flex flex-col space-y-2">
               <p className="text-xl font-bold">Đăng nhập:</p>
               <form
@@ -223,6 +225,108 @@ const PopupLogin = ({ onClose }) => {
                 </button>
               </form>
             </div>
+          </div>
+
+          <div className="sm:hidden flex flex-col item-center justify-center">
+            {toggleM && (
+              <div className="z-50 flex flex-col item-center justify-center">
+                <div className="flex flex-col space-y-2">
+                  <p className="text-xl font-bold">Đăng nhập:</p>
+                  <form
+                    onSubmit={loginButton}
+                    className="flex flex-col items-center flex-1 space-y-4"
+                  >
+                    <input
+                      className="w-full p-4 border-2 focus:border-black"
+                      type="text"
+                      placeholder="Số điện thoại"
+                      maxLength={10}
+                      value={lPhone}
+                      onChange={validateNumber}
+                    />
+                    <input
+                      className="w-full p-4 border-2 focus:border-black"
+                      type="password"
+                      placeholder="Mật khẩu"
+                      value={lPassword}
+                      onChange={(e) => setLPassword(e.target.value)}
+                    />
+                    <div className="flex items-center justify-end w-full">
+                      <p className="text-sm font-medium underline cursor-pointer whitespace-nowrap underline-offset-2 hover:text-gray-500">
+                        Quên mật khẩu?
+                      </p>
+                    </div>
+                    <button
+                      type="submit"
+                      className="p-2 rounded-xl border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white transition duration-500"
+                    >
+                      Đăng nhập
+                    </button>
+                  </form>
+                </div>
+
+                <span className="w-full text-center text-slate-500 underline decoration-solid py-4">
+                  Hoặc
+                </span>
+
+                <div className="flex item-center justify-center">
+                  <button
+                    onClick={() => setToggleM(!toggleM)}
+                    className="p-2 rounded-xl border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white transition duration-500"
+                  >
+                    Đăng ký
+                  </button>
+                </div>
+              </div>
+            )}
+            {!toggleM && (
+              <>
+                <div className="flex flex-col space-y-2">
+                  <p className="text-xl font-bold">Đăng ký:</p>
+                  <form
+                    onSubmit={signUpButton}
+                    className="flex flex-col items-center flex-1 space-y-4"
+                  >
+                    <input
+                      className="w-full p-4 border-2 focus:border-black"
+                      type="text"
+                      placeholder="Email"
+                      value={email}
+                      onChange={handleInputChange}
+                    />
+                    <input
+                      className="w-full p-4 border-2 focus:border-black"
+                      type="text"
+                      placeholder="Số điện thoại"
+                      maxLength={10}
+                      value={phone}
+                      onChange={validateNumber2}
+                    />
+                    <input
+                      className="w-full p-4 border-2 focus:border-black"
+                      type="password"
+                      placeholder="Mật khẩu"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <input
+                      className="w-full p-4 border-2 focus:border-black"
+                      type="text"
+                      placeholder="Tên"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                    />
+                    <AddressPicker sendDataToParent={handleData} />
+                    <button
+                      type="submit"
+                      className="p-2 rounded-xl border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white transition duration-500"
+                    >
+                      Đăng ký
+                    </button>
+                  </form>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>

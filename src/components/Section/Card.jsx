@@ -12,12 +12,12 @@ const Card = (props) => {
   const { data } = props;
 
   return (
-    <div className="sm:flex min-h-[170px] px-4 py-4 items-center border-2 rounded-lg w-full shadow-2xl bg-white">
-      <div className="basis-64 flex items-center">
+    <div className="flex sm:flex-row flex-col space-y-4 min-h-[170px] px-4 py-4 items-center border-2 rounded-lg w-full shadow-2xl bg-white">
+      <div className="sm:basis-64 flex md:flex-row flex-col items-center">
         <img src={data.thumbnail} alt={data.name} className="w-36" />
         <p className="basis-1/2 text-center font-medium">{data.name}</p>
       </div>
-      <p className="basis-[691px] px-4">{data.description}</p>
+      <p className="sm:basis-[691px] px-4">{data.description}</p>
       <div>
         <button
           className="whitespace-nowrap py-2 px-4 rounded-md border border-sky-600 text-sky-600 bg-white hover:text-white hover:bg-sky-600 transition duration-500"

@@ -34,7 +34,7 @@ const Popup = ({ isOpen, onClose, link }) => {
                 href="https://zalo.me/g/antgyd728"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sky-600 hover:bg-slate-100 text-lg font-semibold"
+                className="text-sky-600 hover:bg-slate-100 sm:text-lg text-md font-semibold"
               >
                 🤖Nhóm Tổng hợp công cụ AI cho công việc thêm dễ dàng🤖
               </a>

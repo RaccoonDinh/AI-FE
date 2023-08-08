@@ -20,7 +20,16 @@ const App = () => {
     <div className="overflow-hidden">
       <Header />
       <div>
-        <img src="banner.png" alt="banner" className="pt-[72px]" />
+        <img
+          src="banner.png"
+          alt="banner"
+          className="max-sm:hidden pt-[72px]"
+        />
+        <img
+          src="banner_2.png"
+          alt="banner"
+          className="sm:hidden pt-[72px]"
+        />
       </div>
       <Category />
       <Footer />

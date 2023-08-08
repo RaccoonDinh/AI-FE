@@ -76,7 +76,7 @@ export const CRM = [
     link: "https://www.dux-soup.com/",
   },
   {
-    thumbnail: "https://www.klenty.com/a-95b2655c/img/kl_new_pink.png",
+    thumbnail: "https://images.softwaresuggest.com/software_logo/1492448245_logo.jpg",
     name: "Klenty",
     description: "Klenty là một nền tảng tương tác bán hàng. Thực hiện một cách có hệ thống các chiến dịch tiếp cận và tối đa hóa số lượng cuộc họp và doanh số bán hàng.",
     link: "https://www.klenty.com/",
