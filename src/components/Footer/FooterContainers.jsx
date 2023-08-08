@@ -2,7 +2,7 @@
 
 const FooterContainers = ({ children }) => {
 	return (
-		<div className="flex basis-4 sm:basis-1/2 flex-col sm:flex-col md:flex-col lg:flex-row">
+		<div className="flex max-md:item-center max-md:justify-center w-full sm:basis-1/2 flex-col sm:flex-col md:flex-col lg:flex-row">
 			{children}
 		</div>
 	);
