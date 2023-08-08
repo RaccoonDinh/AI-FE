@@ -31,11 +31,12 @@ export default function AddressPicker({ sendDataToParent }) {
     <div className="">
       <Combobox value={selected} onChange={setSelected}>
         <div className="relative mt-1">
-          <div className="relative w-full cursor-default overflow-hidden  border-2 focus:border-black text-left sm:text-sm">
+          <div className="relative w-full cursor-default overflow-hidden border-2 focus:border-black text-left sm:text-sm">
             <Combobox.Input
-              className="w-full border-none p-4 px-8 text-sm leading-5 text-gray-900"
+              className="w-full border-none p-4 px-8 text-sm leading-5 text-gray-900 "
               displayValue={(person) => person.name}
               onChange={(event) => setQuery(event.target.value)}
+              onClick={(event)=>{event.target.value = ""} }
             />
             <Combobox.Button
               className="absolute inset-y-0 right-0 flex items-center pr-2"
@@ -52,8 +53,9 @@ export default function AddressPicker({ sendDataToParent }) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
             afterLeave={() => setQuery("")}
+            className="origin-top"
           >
-            <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+            <Combobox.Options className="absolute bottom-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
               {filteredPeople.length === 0 && query !== "" ? (
                 <div className="relative cursor-default select-none py-2 px-4 text-gray-700">
                   Nothing found.
