@@ -7,7 +7,7 @@ import FooterContainers from "./FooterContainers";
 
 const Footer = () => {
   return (
-    <div className="relative z-10 overflow-hidden bottom-0 w-auto px-2 py-4 m-0 p-0 bg-white">
+    <div className="overflow-hiddenw-auto px-2 py-4 m-0 p-0 bg-white">
       <div className="flex flex-col md:flex-row lg:flex-row max-md:item-center max-md:justify-center max-md:text-center">
         <FooterContainers>
           <CompanyProfile />

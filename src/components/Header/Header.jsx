@@ -1,8 +1,8 @@
 import Cookies from "js-cookie";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import Dropdown from "./Dropdown";
-
 import { navItems } from "../../constants";
 import PopupLogin from "../Popup/PopupLogin";
 
@@ -23,7 +23,9 @@ const Header = () => {
   return (
     <div className="fixed top-0 left-0 right-0 bg-gradient-to-r from-blue-300 to-green-300 shadow-xl">
       <div className="flex px-6 md:px-36 py-2 justify-center items-center">
-        <img src="VNS_logo_ngang_1.png" alt="logo" className="h-14 " />
+        <Link to="/">
+          <img src="VNS_logo_ngang_1.png" alt="logo" className="h-14 " />
+        </Link>
         <div className="sm:flex hidden md:space-x-12 space-x-2 flex-grow justify-center">
           <Dropdown contents={navItems[0].contents} name={navItems[0].name} />
           <Dropdown contents={navItems[1].contents} name={navItems[1].name} />

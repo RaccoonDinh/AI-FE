@@ -1,9 +1,10 @@
-import Category from "./components/Category/Category";
-import Footer from "./components/Footer";
-import Header from "./components/Header/Header";
-
 import { useEffect } from "react";
 import toast, { Toaster, useToasterStore } from "react-hot-toast";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Error from "./pages/Error";
+import Admin from "./pages/Admin";
 
 const App = () => {
   const { toasts } = useToasterStore();
@@ -17,28 +18,20 @@ const App = () => {
   }, [toasts]);
 
   return (
-    <div className="overflow-hidden">
-      <Header />
-      <div>
-        <img
-          src="banner.png"
-          alt="banner"
-          className="max-sm:hidden pt-[72px]"
-        />
-        <img
-          src="banner_2.png"
-          alt="banner"
-          className="sm:hidden pt-[72px]"
-        />
-      </div>
-      <Category />
-      <Footer />
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="admin" element={<Admin />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </BrowserRouter>
       <Toaster
         toastOptions={{
           className: "z-[500]",
         }}
       />
-    </div>
+    </>
   );
 };
 
