@@ -1,26 +1,20 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Error = () => {
-  const navigate = useNavigate();
-
-  const handleBackToHomePage = () => {
-    navigate("/");
-  };
-
   return (
-    <div>
-      <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-black text-[240px] text-light-gray">
+    <div className="py-[150px] overflow-hidden flex justify-center item-center text-center space-y-4 flex-col">
+      <span className="font-black text-[120px] text-light-gray">
         404
       </span>
-      <div className="absolute text-center -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 whitespace-nowrap">
+      <div className="text-center ">
         <h3 className="text-heading-3">OPPS..., KHÔNG TÌM THẤY TRANG!</h3>
         <p className="uppercase text-body-2">
           trang bạn đang tìm kiếm có thể đã bị xóa hoặc tạm thời không có
         </p>
       </div>
-      <button className="" onClick={handleBackToHomePage}>
-        backback
-      </button>
+      <Link to={"/"}>
+        <button className="p-2 rounded-xl border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white transition duration-500">Trở về trang chủ</button>
+      </Link>
     </div>
   );
 };

@@ -20,23 +20,23 @@ const Popup = ({ isOpen, onClose, link }) => {
             </span>
             <div className="flex flex-col items-center justify-center space-y-4">
             <p className="text-center">
-                Tham gia nhóm Zalo
+                Tham gia nhóm VIP
                 <span className="font-semibold">
                   {" "}
-                  Tổng hợp công cụ AI - Sale - Marketing{" "}
+                  AI Insights{" "}
                 </span>
                 để cập nhật những công nghệ mới nhất!
               </p>
               <div className="p-2 border-2 border-dashed border-sky-600 rounded-lg">
-                <img className="w-44" src="QRCode.png" alt="QR Code" />
+                <img className="w-44" src="avt.jpg" alt="img" />
               </div>
               <a
-                href="https://zalo.me/g/antgyd728"
+                href="https://t.me/+FMeIPZXys3xjN2I1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sky-600 hover:bg-slate-100 sm:text-lg text-md font-semibold"
+                className="text-sky-600 hover:bg-slate-100 text-center sm:text-lg text-md font-semibold"
               >
-                🤖Nhóm Tổng hợp công cụ AI cho công việc thêm dễ dàng🤖
+                Nhóm VIP dành cho thành viên 👆
               </a>
               
             </div>

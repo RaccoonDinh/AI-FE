@@ -75,6 +75,7 @@ const Admin = () => {
   };
 
   const handleExport = async (data) => {
+    handleFetchUser();
     const workbook = new ExcelJS.Workbook();
     const worksheet = workbook.addWorksheet("Dữ liệu");
 
