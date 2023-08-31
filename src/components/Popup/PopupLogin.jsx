@@ -3,6 +3,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import Cookies from "js-cookie";
 import validator from "validator";
+import { Link } from "react-router-dom";
 
 import { authenticateApi } from "../../api/authenticate.api";
 import { XMarkIcon } from "../../icons";
@@ -132,12 +133,20 @@ const PopupLogin = ({ onClose }) => {
     <>
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 w-screen">
         <div className="flex flex-col bg-white py-8 px-20 space-y-4 rounded-md items-center justify-center ">
+        {onClose ? (
           <span
             className="rounded-full p-2 border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white transition duration-500 justify-end cursor-pointer"
             onClick={onClose}
           >
             <XMarkIcon />
           </span>
+        ) : (
+          <Link to={"/"} className="rounded-full flex item-center justify-center p-2 border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white transition duration-500 justify-end cursor-pointer">
+            <span>
+              <XMarkIcon />
+            </span>
+          </Link>
+        )}
 
           <p className="text-lg font-semibold text-slate-500">
             Vui lòng đăng nhập để tiếp tục
