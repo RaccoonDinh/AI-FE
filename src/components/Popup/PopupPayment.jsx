@@ -5,6 +5,7 @@ import { XMarkIcon } from "../../icons";
 import { useEffect, useState } from "react";
 // import paymentApi from "../../api/payment.api";???
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
 const PopupPayment = ({ onClose }) => {
@@ -40,12 +41,20 @@ const PopupPayment = ({ onClose }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
       <div className="flex flex-col bg-white py-8 sm:px-20 px-4 space-y-4 rounded-md items-center justify-center max-w-[800px]">
-        <span
-          className="rounded-full p-2 border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white transition duration-500 justify-end cursor-pointer"
-          onClick={onClose}
-        >
-          <XMarkIcon />
-        </span>
+        {onClose ? (
+          <span
+            className="rounded-full p-2 border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white transition duration-500 justify-end cursor-pointer"
+            onClick={onClose}
+          >
+            <XMarkIcon />
+          </span>
+        ) : (
+          <Link to={"/"} className="rounded-full flex item-center justify-center p-2 border border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white transition duration-500 justify-end cursor-pointer">
+            <span>
+              <XMarkIcon />
+            </span>
+          </Link>
+        )}
         <div className="flex flex-col sm:space-x-4 item-center justify-center text-center">
           <p className="sm:px-8 px-2">
             Vui lòng thực hiện thanh toán để tiếp tục sử dụng dịch vụ
@@ -54,8 +63,8 @@ const PopupPayment = ({ onClose }) => {
           {method && (
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <p>
-                <p className="font-semibold">Bước 1:</p> Chuyển khoản thanh
-                toán.
+                <p className="font-semibold">Bước 1:</p> Chuyển khoản thanh toán
+                268.000VNĐ.
               </p>
               <div className="p-2 border-2 border-dashed border-sky-600 rounded-lg">
                 <img className="w-44" src="payment.png" alt="QR Code" />
@@ -78,7 +87,7 @@ const PopupPayment = ({ onClose }) => {
               <div>
                 <p className="font-semibold">Bước 2:</p> Liên hệ với admin{" "}
                 <a
-                  href="https://zalo.me/g/antgyd728"
+                  href="https://zalo.me/0332120339"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sky-600 hover:bg-slate-100 sm:text-lg text-md font-semibold"

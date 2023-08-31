@@ -6,7 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Error from "./pages/Error";
 import Admin from "./pages/Admin";
-import PopupPayment from "./components/Popup/PopupPayment";
+import ChatGPTPrompts from "./pages/ChatGPTPrompts";
+import Login from "./pages/Login";
+import ProtectRoute from "./layout/ProtectedRoute";
 
 const App = () => {
   const { toasts } = useToasterStore();
@@ -23,8 +25,17 @@ const App = () => {
     <>
       <BrowserRouter>
         <Routes>
+          <Route path="/login" element={<Login />} />
           <Route path="/" element={<Home />} />
           <Route path="/admin" element={<Admin />} />
+          <Route
+            path="/prompts"
+            element={
+              <ProtectRoute>
+                <ChatGPTPrompts />
+              </ProtectRoute>
+            }
+          />
           <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>

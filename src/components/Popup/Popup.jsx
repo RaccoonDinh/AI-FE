@@ -34,7 +34,7 @@ const Popup = ({ isOpen, onClose, link }) => {
                 href="https://t.me/+FMeIPZXys3xjN2I1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sky-600 hover:bg-slate-100 text-center sm:text-lg text-md font-semibold"
+                className="px-2 text-sky-600 hover:bg-slate-300 bg-slate-200 text-center sm:text-lg text-md font-semibold"
               >
                 Nhóm VIP dành cho thành viên 👆
               </a>

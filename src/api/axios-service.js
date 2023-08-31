@@ -2,7 +2,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 const axiosService = axios.create({
-  baseURL: "http://localhost:5500/",
+  baseURL: "https://beaitools.vietnamstartup.io/",
 });
 axiosService.interceptors.request.use(
   async function (config) {
